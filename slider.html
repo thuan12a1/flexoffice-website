@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+      
+    
+        .swiper {
+          width: 100%;
+          height: 300px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+    
+        .swiper-slide {
+          background-size: cover;
+          background-position: center;
+        }
+    
+        .gallery-top {
+          height: 300px;
+          width: 100%;
+        }
+    
+        .gallery-thumbs {
+          height: 50px;
+          box-sizing: border-box;
+          padding: 10px 0;
+        }
+    
+        .gallery-thumbs .swiper-slide {
+          width: 100%;
+          height: 50px;
+          opacity: 0.4;
+        }
+    
+        .gallery-thumbs .swiper-slide-thumb-active {
+          opacity: 1;
+        }
+      </style>
+</head>
+<body>
+    <div class="swiper gallery-top">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" style="background-image:url(./assets/images/10-bia-mau-my-a3-1.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(./assets/images/bam-kim-10-plus.png)"></div>
+          <div class="swiper-slide" style="background-image:url(./assets/images/bang-keo-hai-mat-5f-1-500x500.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(./assets/images/bao-xop-cd-trang.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(./assets/images/baothubd.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(./assets/images/bia-cong-plus-1m-9f.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(./assets/images/bia-ho-so-xin-viec-mau.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(./assets/images/bialaA4.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(./assets/images/bia-acco-giay.jpg)"></div>
+          <div class="swiper-slide" style="background-image:url(./assets/images/bia-treo-suremark.jpg)"></div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-white"></div>
+        <div class="swiper-button-prev swiper-button-white"></div>
+      </div>
+      <div class="swiper gallery-thumbs">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background-image:url(./assets/images/10-bia-mau-my-a3-1.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/bam-kim-10-plus.png)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/bang-keo-hai-mat-5f-1-500x500.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/bao-xop-cd-trang.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/baothubd.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/bia-cong-plus-1m-9f.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/bia-ho-so-xin-viec-mau.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/bialaA4.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/bia-acco-giay.jpg)"></div>
+            <div class="swiper-slide" style="background-image:url(./assets/images/bia-treo-suremark.jpg)"></div>
+        </div>
+      </div>
+    
+    
+</body>
+<script>
+
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+  </script>
+</html>

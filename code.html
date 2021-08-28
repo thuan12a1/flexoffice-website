@@ -1,0 +1,419 @@
+<section>
+    <div class="swiper-container mySwiper">
+     
+        <div class="swiper-wrapper">
+          
+        
+            <div class="swiper-slide">
+               
+                    <div style="width: 100px; height: 100px;">
+
+                    </div>
+               
+             </div>
+             <div class="swiper-slide">
+              
+                    <div style="width: 100px; height: 100px;">
+
+                    </div>
+               
+             </div>
+             <div class="swiper-slide">
+               
+                    <div style="width: 100px; height: 100px;">
+
+                    </div>
+               
+             </div>
+             <div class="swiper-slide">
+               
+                    <div style="width: 100px; height: 100px;border: 1px solid #000;">
+
+                    </div>
+                
+             </div>
+           
+           
+           
+           
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+    </div>
+</section>
+
+<div class="filte">
+       <ul class="filter__lis">
+
+           <li class="filter__list-titl" > 
+               <span class="filter-labe">Sắp xếp theo</span>
+           </li>
+           <li class="filter-item active">
+               <a class="filter-item-text">Phổ biến</a>
+           </li>
+           <li class="filter-item">
+               <a class="filter-item-text">Tên A → Z</a>
+           </li>
+           <li class="filter-item">
+               <a class="filter-item-text">Tên Z → A</a>
+           </li>
+           <li class="filter-item">
+               <a class="filter-item-text">Giá tăng dần</a>
+           </li>
+           <li class="filter-item">
+               <a class="filter-item-text">Giá giảm dần</a>
+           </li>
+           <li class="filter-item">
+               <a class="filter-item-text">Hàng mới</a>
+           </li>
+         
+           
+       </ul>
+   </div>
+
+
+
+   <header class="header">
+    <div class="grid">
+        <nav class="header-navbar">
+            <ul class="header-list">
+                <li class="header-item">
+                    Kết nối
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                </li>
+
+            </ul>
+            <ul class="header-list">
+                @if (Session["dn"] != null)
+                {
+                    <li class="header-item header-user">
+                        <span class="header-username">Thuận Võ</span>
+                        <ul class="header-user-menu">
+                            <li class="header-user-item"><a class="header-user-link"></a>Kiểm tra đơn hàng</li>
+                            <li class="header-user-item"><a class="header-user-link">Tài khoản của bạn</a></li>
+                            <li class="header-user-item"><a class="header-user-link"></a>Đăng xuất</li>
+                        </ul>
+                    </li>
+                    @*<li class="header-navbar-item header-navbar-user"><a class="header-navbar-item-link" href="@Url.Action("CheckOrder","KhachHang") "><i class=" fa fa-file-alt"></i> Kiểm tra đơn hàng</a></li>
+                        <li class="header-navbar-item">
+                            <a class="header-navbar-item-link" href="@Url.Action("DangNhap", "KhachHang")"><i class="fa fa-user-circle-alt"></i>@Session["dn"]</a>
+                        </li>
+                        <li class="header-navbar-item">
+                            <a class="header-navbar-item-link" href="@Url.Action("ThoatKH", "KhachHang")"><i class="fa fa-sign-out-alt"></i>  Đăng xuất</a>
+                        </li>*@
+
+                }
+                else
+                {
+
+                    <li class="header-item">
+                        <a class="header-item-link" href="@Url.Action("DangKy", "KhachHang")"><i class="far fa-question-circle"></i> Trợ giúp</a>
+                    </li>
+                    <li class="header-item header-user">
+                        <img class="header-img" src="~/Content/Images/avatar.png" />
+                        <span class="header-username">Thuận Võ</span>
+                        <ul class="header-user-menu">
+                            <li class="header-user-item"><a class="header-user-link">Kiểm tra đơn hàng</a></li>
+                            <li class="header-user-item"><a class="header-user-link">Tài khoản của bạn</a></li>
+                            <li class="header-user-item"><a class="header-user-link">Đăng xuất</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="header-item">
+                        <a id="SignIn" class="header-item-link" @*href="@Url.Action("DangNhap", "KhachHang")"*@><i class="fa fa-sign-in-alt"></i>  Đăng nhập</a>
+
+                    </li>
+                    <li class="header-item">
+                        <a id="SignUp" class="header-item-link" @*href="@Url.Action("DangKy", "KhachHang")"*@><i class="fa fa-download"></i>  Đăng ký</a>
+                    </li>
+
+                }
+
+            </ul>
+        </nav>
+        @*<div class="header-with-search">
+                <div class="header-logo">
+                    <img class="header-logo-img" src="~/Content/Images/logo.png" />
+                </div>
+                <form class="header-search">
+                    <input type="text" class="header-search-input" placeholder="Tìm trong shop này" />
+                    <button class="header-search-btn"><i class="fa fa-search header-search-icons"></i></button>
+                </form>
+                <div class="header-cart">
+                    <i class="fa fa-shopping-cart header-cart-icons"></i>
+                    <span class="header-cart-notice">5</span>
+                    <div class="header-cart-notify">
+                        <img class="header-cart-notify-img" src="~/Content/Images/notify.png" />
+                        <span class="header-cart-notify-text">Chưa có sản phẩm nào</span>
+                    </div>
+                </div>
+            </div>*@
+    </div>
+
+
+</header>
+
+
+function check_min_qty () {
+    var quantity = $('#qtym').val();
+    if (quantity < 5) {
+        $('.warning-quantity').css('display', 'block');
+        $('.add_to_cart').addClass('disabled');
+    } else {
+        $('.warning-quantity').css('display', 'none');
+        $('.add_to_cart').removeClass('disabled');
+    }
+}
+
+<nav class="brand">
+    <ul class="filter-list">
+        <div class="list__item-heading">
+            <a class="brand-item__link">
+                THƯƠNG HIỆU
+            </a>
+        </div>
+        <li class="brand__list-item active">
+
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                Flexoffice
+            </span>
+
+        </li>
+        <li class="brand__list-item active">
+
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                Thiên long
+            </span>
+
+        </li>
+        <li class="brand__list-item active">
+
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                Điểm 10
+            </span>
+
+        </li>
+
+        <li class="brand__list-item active">
+
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                ColoKit
+            </span>
+
+
+        </li>
+        <li class="brand__list-item">
+
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                LERBOLARIO (ITALY)
+            </span>
+
+        </li>
+        <li class="brand__list-item">
+
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                Dymo
+            </span>
+
+
+        </li>
+        <li class="brand__list-item">
+
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                Bizner
+            </span>
+
+        </li>
+        <li class="brand__list-item">
+
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                Sharpie
+            </span>
+
+
+        </li>
+        <li class="brand__list-item">
+
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                Paper One
+            </span>
+
+        </li>
+        <li class="brand__list-item">
+
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                Superme
+            </span>
+
+        </li>
+        <li class="brand__list-item">
+
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                Tomy
+            </span>
+
+        </li>
+        <div class="view__more">
+            <a class="view__more-text">Xem thêm
+                <i class="fa fa-angle-down view__more-icon"></i>
+            </a>
+        </div>
+    </ul>
+
+    <ul class="filter-list">
+        <div class="list__item-heading">
+            <a class="color-item__link">
+                MÀU SẮC
+            </a>
+        </div>
+        <div class="color__list">
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker red" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker blue" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker yellow" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker green" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker pink" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker gray" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker purple" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker brown" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker orange" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker irish" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker salmon" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker skyblue" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker lavender" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker gray-dark" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker teal" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker neon-green" type="checkbox">
+                </span>
+            </li>
+            <li class="color__list-item">
+                <span>
+                    <input class="primary-item-checked colorPicker light-gray" type="checkbox">
+                </span>
+            </li>
+
+        </div>
+    </ul>
+
+    <ul class="filter-list">
+        <div class="list__item-heading">
+            <a class="price-item__link">
+                MỨC GIÁ
+            </a>
+        </div>
+        <li class="price__list-item">
+            <span>
+                Giá dưới 100.000đ
+            </span>
+        </li>
+        <li class="price__list-item">
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                100.000đ - 200.000đ
+            </span>
+        </li>
+        <li class="price__list-item">
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                200.000đ - 300.000đ
+            </span>
+        </li>
+        <li class="price__list-item">
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                300.000đ - 500.000đ
+            </span>
+        </li>
+        <li class="price__list-item">
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                500.000đ - 1.000.000đ
+            </span>
+        </li>
+        <li class="price__list-item">
+            <span>
+                <input class="primary-item-checked" type="checkbox">
+                Giá trên 1.000.000đ
+            </span>
+        </li>
+
+    </ul>
+
+</nav>

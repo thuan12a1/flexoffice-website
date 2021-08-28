@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexoffice</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/collection.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="grid">
+            <nav class="header__navbar hide-tablet hide-mobile">
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item header__navbar-item-line header__navbar-qrCode">
+                        Tải ứng dụng
+                        <div class="header__qrCode">
+                            <img class="header__qrCode-img" src="./assets/images/qr_code.png" alt="QR_CODE" />
+                            <div class="header__qrCode-app">
+                                <a class="header__link"><img class="header__qrCode-download"
+                                        src="./assets/images/appstore.png" alt="AppStore" /></a>
+                                <a class="header__link"><img class="header__qrCode-download"
+                                        src="./assets/images/ggplay.png" alt="Google Play" /></a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="header__navbar-item">
+
+                        Kết nối
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+
+                    </li>
+
+                </ul>
+                <ul class="header__navbar-list">
+                    <li class="header__navbar-item header__navbar-notify">
+                        <i class="far fa-bell"></i> Thông báo
+                        <div class="header__notify">
+                            <div class="header__notify-top">
+                                <img class="header__notify-img" src="./assets/images/notify.png" />
+                                <div class="header__notify-text">Đăng nhập để xem thông báo</div>
+                                <div class="header__notify-bottom">
+                                    <button class="header__notify-bottom-btn">Đăng ký</button>
+                                    <button class="header__notify-bottom-btn">Đăng nhập</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </li>
+                    <li class="header__navbar-item">
+                        <a class="header__navbar-item-link" href="#"><i class="far fa-question-circle"></i> Trợ giúp</a>
+                    </li>
+                    <li class="header__navbar-item header__navbar-user">
+                        <i class="fas fa-user-circle"></i>
+                        <!-- <img class="header__navbar-img" src="./assets/images/avatar.png" /> -->
+                        <span class="header__navbar-username">Thuận Võ</span>
+                        <ul class="header__navbar-user-menu">
+                            <li class="header__navbar-user-item"><a href="#" class="header__navbar-user-link">Kiểm tra
+                                    đơn
+                                    hàng</a></li>
+                            <li class="header__navbar-user-item"><a href="#" class="header__navbar-user-link">Tài khoản
+                                    của
+                                    bạn</a></li>
+                            <li class="header__navbar-user-item"><a href="#" class="header__navbar-user-link">Đăng
+                                    xuất</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="header__navbar-item">
+                        <a id="SignIn" class="header__navbar-item-link" @*href="#"><i class="fa fa-sign-in-alt"></i>
+                            Đăng nhập</a>
+
+                    </li>
+                    <li class="header__navbar-item">
+                        <a id="SignUp" class="header__navbar-item-link" @*href="#"><i class="fa fa-download"></i> Đăng
+                            ký</a>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <div class="header-with-search hide-tablet">
+                <div class="header__logo">
+                    <a href="#"><img class="header__logo-img" src="./assets/images/logo.png" /></a>
+                </div>
+                <form class="header__search">
+                    <input type="text" class="header__search-input" placeholder="Tìm trong shop này" />
+                    <button class="header__search-btn"><i class="fa fa-search header__search-icons"></i></button>
+                </form>
+                <div class="header__cart">
+                    <a class="cart-btn">
+                        <i class="fas fa-shopping-bag header__cart-icons"></i>
+                        <span>Giỏ hàng</span>
+                        <span>0</span>
+                    </a>
+                    <div class="header__cart-notify">
+                        <img class="header__cart-notify-img" src="./assets/images/notify.png" />
+                        <span class="header__cart-notify-text">Chưa có sản phẩm nào</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__mobile">
+            <div class="nav__bars-btn">
+                <label for="nav__mobile-input" class="fas fa-bars nav__bars-btn-icons">
+                </label>
+            </div>
+            <div class="header__logo">
+                <img class="header__logo-img" src="./assets/images/logo.png" />
+            </div>
+            <form class="header__search">
+                <input type="text" class="header__search-input" placeholder="Tìm trong shop này" />
+                <button class="header__search-btn"><i class="fa fa-search header__search-icons"></i></button>
+            </form>
+            <div class="header__cart">
+
+                <a class="cart-btn">
+                    <i class="fas fa-shopping-bag header__cart-icons"></i>
+                    <span>Giỏ hàng</span>
+                    <span>0</span>
+                </a>
+
+
+            </div>
+        </div>
+        <input type="checkbox" class="nav__input" id="nav__mobile-input" hidden />
+        <label for="nav__mobile-input" class="nav__overlay"></label>
+        <!-- <input type="checkbox" class="filterClick" id="sortClick" />
+        <label for="sortClick" class="nav__overlay"></label> -->
+        <nav class="nav__mobile">
+            <!-- <i class="fas fa-times nav__mobile-close"></i> -->
+            <div class="nav__mobile-heading">
+                <i class="fas fa-user-circle nav__mobile-icon"></i>
+                <a class="nav__mobile-item__link-heading">
+                    <span style="display:flex;flex-direction:column;">
+                        <span class="nav__mobile-account"> Tài khoản</span>
+                        <span class="nav__mobile-login"> Đăng nhập</span>
+                    </span>
+                </a>
+            </div>
+            <ul class="nav__mobile-list">
+                <li class="nav__mobile-item">
+                    <a class="nav__mobile-item__link nav__mobile-item__link-heading">
+                        <span>
+                            <img class="nav__mobile-heading-icons" src="./assets/images/menu_icon.png" />
+                            Sản phẩm mùa thi
+                        </span>
+                    </a>
+                </li>
+                <li class="nav__mobile-item">
+                    <a class="nav__mobile-item__link" href="#">
+                        <span>
+                            <img class="nav__mobile-heading-img" src="./assets/images/menu_icon_1.png" />
+                            Bút viết
+                        </span>
+                    </a>
+                    <label for="nav__mobile-btn-show" class="fa fa-angle-right nav__mobile-item__icons"></label>
+                    <input type="checkbox" class="nav__submenu-input" id="nav__mobile-btn-show" hidden />
+
+                    <ul class="submenu__list-mobile">
+                        <li class="submenu__mobile-item-heading">
+                            <label for="nav__mobile-btn-show" class="fa fa-angle-left brand__list-item__icons"></label>
+                            <!-- <input type="checkbox" class="nav__submenu-input-back" id="nav__mobile-btn-back" /> -->
+                            <a class="submenu__mobile-item-heading-link">
+                                <span>
+                                    BÚT VIẾT
+                                </span>
+                            </a>
+                        </li>
+
+                        <li class="submenu__mobile-item submenu__mobile-heading">
+                            <a class="submenu__mobile-item-link-heading">
+                                <span>
+                                    BEST SELLER
+                                    <img class="category-heading-icons" src="./assets/images/menu_icon.png" />
+                                </span>
+                            </a>
+                        </li>
+                        <li class="submenu__mobile-item"><a class="submenu__mobile-item-link">Bút bi</a></li>
+                        <li class="submenu__mobile-item"><a class="submenu__mobile-item-link">Bút lông bảng</a></li>
+                        <li class="submenu__mobile-item"><a class="submenu__mobile-item-link">Bút lông kim</a></li>
+                        <li class="submenu__mobile-item"><a class="submenu__mobile-item-link">Bút chì</a></li>
+                        <li class="submenu__mobile-item"><a class="submenu__mobile-item-link">Bút dạ quang</a></li>
+                        <li class="submenu__mobile-item"><a class="submenu__mobile-item-link">Bút Gel</a></li>
+                        <li class="submenu__mobile-item"><a class="submenu__mobile-item-link">Bút xóa</a></li>
+                        <li class="submenu__mobile-item">
+                            <a class="submenu__mobile-item-link">Các loại bút khác</a>
+                            <ul class="submenu__mobile-list-child">
+                                <li class="submenu__mobile-item-child"><a class="submenu__mobile-item-child-link">Bút dạ
+                                        quang</a></li>
+                                <li class="submenu__mobile-item-child"><a class="submenu__mobile-item-child-link">Bút
+                                        Gel</a></li>
+                                <li class="submenu__mobile-item-child"><a class="submenu__mobile-item-child-link">Bút
+                                        xóa</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu__mobile-item">
+                            <a class="submenu__mobile-item-link">Thương hiệu</a>
+                            <ul class="submenu__mobile-list-child">
+                                <li class="submenu__mobile-item-child"><a class="submenu__mobile-item-child-link">Thiên
+                                        long</a></li>
+                                <li class="submenu__mobile-item-child"><a class="submenu__mobile-item-child-link">Điểm
+                                        10</a></li>
+                                <li class="submenu__mobile-item-child"><a
+                                        class="submenu__mobile-item-child-link">Coloki</a></li>
+                                <li class="submenu__mobile-item-child"><a
+                                        class="submenu__mobile-item-child-link">Flexoffice</a></li>
+                                <li class="submenu__mobile-item-child"><a class="submenu__mobile-item-child-link">Thiên
+                                        long</a></li>
+                                <li class="submenu__mobile-item-child"><a class="submenu__mobile-item-child-link">Điểm
+                                        10</a></li>
+                                <li class="submenu__mobile-item-child"><a
+                                        class="submenu__mobile-item-child-link">Coloki</a></li>
+                                <li class="submenu__mobile-item-child"><a
+                                        class="submenu__mobile-item-child-link">Flexoffice</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </li>
+                <li class="nav__mobile-item">
+                    <a class="nav__mobile-item__link">
+                        <span>
+                            <img class="nav__mobile-heading-img" src="./assets/images/menu_icon_3.png" />
+                            Văn phòng phẩm
+                        </span>
+                    </a>
+                    <i class="fa fa-angle-right nav__mobile-item__icons">
+                    </i>
+                </li>
+                <li class="nav__mobile-item">
+                    <a class="nav__mobile-item__link">
+                        <span>
+                            <img class="nav__mobile-heading-img" src="./assets/images/menu_icon_4.png" />
+                            Dụng cụ học tập
+                        </span>
+                    </a>
+                    <i class="fa fa-angle-right nav__mobile-item__icons">
+                    </i>
+                </li>
+                <li class="nav__mobile-item">
+                    <a class="nav__mobile-item__link">
+                        <span>
+                            <img class="nav__mobile-heading-img" src="./assets/images/menu_icon_5.png" />
+                            Mỹ thuật
+                        </span>
+                    </a>
+                    <i class="fa fa-angle-right nav__mobile-item__icons"></i>
+                </li>
+                <li class="nav__mobile-item">
+                    <a class="nav__mobile-item__link">
+                        <span>
+                            <img class="nav__mobile-heading-img" src="./assets/images/menu_icon_7.png" />
+                            Đồ chơi
+                        </span>
+                    </a>
+                    <i class="fa fa-angle-right nav__mobile-item__icons"></i>
+                </li>
+                <li class="nav__mobile-item">
+                    <a class="nav__mobile-item__link">
+                        <span>
+                            <img class="nav__mobile-heading-img" src="./assets/images/menu_icon_2.png" />
+                            STEAM & TIY
+                        </span>
+                    </a>
+                    <i class="fa fa-angle-right nav__mobile-item__icons"></i>
+                </li>
+                <li class="nav__mobile-item">
+                    <a class="nav__mobile-item__link">
+                        <span>
+                            <img class="nav__mobile-heading-img" src="./assets/images/menu_icon_6.png" />
+                            Sản phẩm cao cấp
+                        </span>
+                    </a>
+                    <i class="fa fa-angle-right nav__mobile-item__icons"></i>
+                </li>
+                <li class="nav__mobile-item">
+                    <a class="nav__mobile-item__link">
+                        <span>
+                            <img class="nav__mobile-heading-img" src="./assets/images/menu_icon_8.png" />
+                            Các sản phẩm khác
+                        </span>
+                    </a>
+                    <i class="fa fa-angle-right nav__mobile-item__icons"></i>
+                </li>
+            </ul>
+            <div class="information" style="display:flex;flex-direction:column;padding-left:15px">
+                <span class="information-title" style="padding-top:10px">
+                    <img class="nav__mobile-heading-img" src="./assets/images/menu_icon_policy.png" />
+                    <a href="#">Giá tốt hôm nay</a>
+                </span>
+                <span class="information-title" style="padding-top:10px">
+                    <img class="nav__mobile-heading-img" src="./assets/images/menu_icon_ship.png" />
+
+                    <a href="#">Kiểm tra đơn hàng</a>
+                </span>
+            </div>
+        </nav>
+        <div class="modalSignUp" id="modalSignUp">
+            <div class="modal__overlay">
+            </div>
+            <div class="modal__body">
+                <div class="auth-form-wrapper">
+                    <form class="auth-form">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Đăng ký</h3>
+                            <span id="login" class="auth-form__heading-btn">Đăng nhập</span>
+                        </div>
+                        <div class="auth-form__wrapp-input">
+                            <div class="auth-form__input-group">
+                                <div class="auth-form__input auth-form__input-half">
+                                    <input class="auth-form__input-name" type="text" name="txtName" placeholder="Tên">
+                                    <input class="auth-form__input-name" type="text" name="txtName" placeholder="Họ">
+                                </div>
+                            </div>
+                            <div class="auth-form__input-group">
+                                <input class="auth-form__input" type="email" name="txtEmail"
+                                    placeholder="Email của bạn">
+                            </div>
+                            <div class="auth-form__input-group">
+                                <input type="date" class="auth-form__input" id="txtNgaySinh" name="txtNgaySinh">
+                            </div>
+
+                            <div class="auth-form__input-group">
+                                <div class="auth-form__input auth-form__input-half">
+                                    <input class="auth-form__input-name" type="password" name="txtPassword"
+                                        placeholder="Mật khẩu của bạn">
+                                    <input class="auth-form__input-name" type="password" name="txtRePassword"
+                                        placeholder="Nhập lại mật khẩu">
+                                </div>
+                            </div>
+                            <div class="auth-form__input-group">
+
+                            </div>
+                            <div class="auth-form__text">
+                                <p class="auth-form__text-policy">Bằng việc đăng kí bạn đã đồng ý với shoppe về <a
+                                        class="auth-form__text-link">Điều khoản dịch vụ & chính sách bảo mật</a></p>
+                            </div>
+                            <div class="auth-form__input-controls">
+                                <input type="button" id="backOut" class="auth-form__input-back In" value="Trở về">
+                                <input class="auth-form__input-submit" type="submit" value="Đăng ký">
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="auth-form__bottom">
+                        <button class="auth-form__input-fb">
+                            <i class="fab fa-facebook-f auth-form__input-icons"></i>Kết nối với Facebook
+                        </button>
+                        <button class="auth-form__input-gg">
+                            <i class="fab fa-google auth-form__input-icons"></i>Kết nối với Google
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modalSignIn" id="modalSignIn">
+            <div class="modal__overlay">
+            </div>
+            <div class="modal__body">
+                <div class="auth-form-wrapper">
+                    <form class="auth-form">
+                        <div class="auth-form__header">
+                            <h3 class="auth-form__heading">Đăng nhập</h3>
+                            <span id="logout" class="auth-form__heading-btn">Đăng ký</span>
+                        </div>
+                        <div class="auth-form__wrapp-input">
+
+                            <div class="auth-form__input-group">
+                                <input class="auth-form__input" type="email" name="txtEmail"
+                                    placeholder="Email của bạn">
+                            </div>
+                            <div class="auth-form__input-group">
+                                <input class="auth-form__input" type="password" name="txtPassword"
+                                    placeholder="Mật khẩu của bạn">
+                            </div>
+                            <div class="auth-form__text">
+                                <p class="auth-form__text-link-forget">
+                                    Quên mật khẩu
+                                    <a class="auth-form__text-help">Trợ giúp?</a>
+                                </p>
+
+                            </div>
+                            <div class="auth-form__input-controls">
+                                <input type="button" id="backIn" class="auth-form__input-back" value="Trở về">
+                                <input class="auth-form__input-submit" type="submit" value="Đăng nhập">
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="auth-form__bottom">
+                        <button class="auth-form__input-fb">
+                            <i class="fab fa-facebook-f auth-form__input-icons"></i>Kết nối với Facebook
+                        </button>
+                        <button class="auth-form__input-gg">
+                            <i class="fab fa-google auth-form__input-icons"></i>Kết nối với Google
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="modalBuy" id="modalBuy">
+            <div class="modal__overlay">
+            </div>
+            <!-- <div class="modal__body form__product-wrapp">
+                        <div class="form__product-wrap">
+                            <form class="form__product">
+                                <i class="fa fa-times form__product-btn-close"></i>
+                                <div class="form__product-heading">
+                                    <i class="fa fa-check form__heading-icons"></i>
+                                    <h3 class="form__heading-text">Sản phẩm vừa đươc thêm vào giỏ hàng</h3>
+                                </div>
+                                <div class="form__product-content">
+                                    <img class="form__product-content-img" src="~/./assets/images/bam-kim-so-3-206A.jpg" />
+                                    <div class="form__product-content-detail">
+                                        <p class="form__product-text">Bút lông màu Fiber Pen Colokit FP-C03</p>
+                                        <p class="form__product-price"> 57,420₫</p>
+                                    </div>
+                                </div>
+                                <div class="form__product-input">
+                                    <a class="form__product-info-link current-cart">Giỏ hàng hiên có (7) sản phẩm</a>
+                                    <a class="form__product-input-checkout">Tiến hành đặt hàng</a>
+                                </div>
+    
+                            </form>
+    
+    
+                        </div>
+                    </div> -->
+        </div>
+    </header>
+    <section class="subheader">
+        <div class="grid">
+            <div class="grid_column-3">
+                <div class="title-wrap">
+                    <div class="list-category">
+                        <div class="title-icons">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                        <span class="list-title">Danh sách sản phẩm</span>
+                        <nav class="category category-collection">
+                            <ul class="category-list">
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link category-item__link-heading">
+                                        <span>
+                                            <img class="category-heading-icons" src="./assets/images/menu_icon.png" />
+                                            Sản phẩm mùa thi
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        <span>
+                                            <img class="category-heading-img" src="./assets/images/menu_icon_1.png" />
+                                            Bút viết
+                                        </span>
+                                    </a>
+                                    <i class="fa fa-angle-right category-item__icons"></i>
+                                    <ul class="submenu__list">
+                                        <li class="submenu__item">
+                                            <a href="#" class="submenu__item-link-heading">
+                                                <span>
+                                                    BEST SELLER
+                                                    <img class="category-heading-icons"
+                                                        src="./assets/images/menu_icon.png" />
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="submenu__item"><a href="#" class="submenu__item-link">Bút bi</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__item-link">Bút lông
+                                                bảng</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__item-link">Bút lông
+                                                kim</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__item-link">Bút chì</a>
+                                        </li>
+                                        <li class="submenu__item"><a href="#" class="submenu__item-link">Bút dạ
+                                                quang</a></li>
+                                        <li class="submenu__item"><a href="#" class="submenu__item-link">Bút Gel</a>
+                                        </li>
+                                        <li class="submenu__item"><a hre f="#" class="submenu__item-link">Bút xóa</a>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="#" class="submenu__item-link">Các loại bút khác</a>
+                                            <i class="fa fa-angle-right category-item__icon"></i>
+                                            <ul class="submenu__list-child">
+                                                <li class="submenu__item-child"><a href="#"
+                                                        class="submenu__item-child-link">Bút
+                                                        dạ
+                                                        quang</a></li>
+                                                <li class="submenu__item-child"><a href="#"
+                                                        class="submenu__item-child-link">Bút
+                                                        Gel</a></li>
+                                                <li class="submenu__item-child"><a href="#"
+                                                        class="submenu__item-child-link">Bút
+                                                        xóa</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="submenu__item">
+                                            <a href="#" class="submenu__item-link">Thương hiệu</a>
+                                            <i class="fa fa-angle-right category-item__icon"></i>
+                                            <ul class="submenu__list-child">
+                                                <li class="submenu__item-child"><a href="#"
+                                                        class="submenu__item-child-link">Thiên
+                                                        long</a></li>
+                                                <li class="submenu__item-child"><a href="#"
+                                                        class="submenu__item-child-link">Điểm
+                                                        10</a></li>
+                                                <li class="submenu__item-child"><a href="#"
+                                                        class="submenu__item-child-link">Colokit</a></li>
+                                                <li class="submenu__item-child"><a href="#"
+                                                        class="submenu__item-child-link">Flexoffice</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        <span>
+                                            <img class="category-heading-img" src="./assets/images/menu_icon_3.png" />
+                                            Văn phòng phẩm
+                                        </span>
+                                    </a>
+                                    <i class="fa fa-angle-right category-item__icons">
+                                    </i>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        <span>
+                                            <img class="category-heading-img" src="./assets/images/menu_icon_4.png" />
+                                            Dụng cụ học tập
+                                        </span>
+                                    </a>
+                                    <i class="fa fa-angle-right category-item__icons">
+                                    </i>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        <span>
+                                            <img class="category-heading-img" src="./assets/images/menu_icon_5.png" />
+                                            Mỹ thuật
+                                        </span>
+                                    </a>
+                                    <i class="fa fa-angle-right category-item__icons"></i>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        <span>
+                                            <img class="category-heading-img" src="./assets/images/menu_icon_7.png" />
+                                            Đồ chơi
+                                        </span>
+                                    </a>
+                                    <i class="fa fa-angle-right category-item__icons"></i>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        <span>
+                                            <img class="category-heading-img" src="./assets/images/menu_icon_2.png" />
+                                            STEAM & DIY
+                                        </span>
+                                    </a>
+                                    <i class="fa fa-angle-right category-item__icons"></i>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        <span>
+                                            <img class="category-heading-img" src="./assets/images/menu_icon_6.png" />
+                                            Sản phẩm cao cấp
+                                        </span>
+                                    </a>
+                                    <i class="fa fa-angle-right category-item__icons"></i>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        <span>
+                                            <img class="category-heading-img" src="./assets/images/menu_icon_8.png" />
+                                            Các sản phẩm khác
+                                        </span>
+                                    </a>
+                                    <i class="fa fa-angle-right category-item__icons"></i>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="information">
+                        <span class="information-title">
+                            <i class="far fa-star information-icons"></i>
+                            <a href="#">Giá tốt hôm nay</a>
+                        </span>
+                        <span class="information-title">
+                            <i class="far fa-sticky-note information-icons"></i>
+
+                            <a href="#">Kiểm tra đơn hàng</a>
+                        </span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section style="background-color: #eee;margin-bottom: 10px;">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="grid__column-12">
+                    <div class="breadcrumb">
+                        <ul class="breadcrumb__wrapper">
+                            <li class="breadcrumb__item">
+                                <a href="#">Trang chủ</a>
+                            </li>
+                            <li class="breadcrumb__item">
+                                <a href="#">Danh mục</a>
+                            </li>
+                            <li class="breadcrumb__item breadcrumb__item-active">
+                                <a href="#">Bút bi</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="content">
+        <div class="grid">
+            <div class="detail__wrap">
+                <div class="grid__row">
+                    <div class="grid__column-4 grid__column-12">
+                        <div class="swiper gallery-top">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="slider-img" src="./assets/images/10-bia-mau-my-a3-1.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="slider-img" src="./assets/images/bam-kim-10-plus.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="slider-img" src="./assets/images/bao-xop-cd-trang.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="slider-img" src="./assets/images/baothubd.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="slider-img" src="./assets/images/bia-ho-so-xin-viec-mau.jpg">
+                                </div>
+
+                            </div>
+                            <!-- Add Arrows -->
+                            <div class="swiper-button-next swiper-button-left"></div>
+                            <div class="swiper-button-prev swiper-button-right"></div>
+                        </div>
+                        <div class="swiper gallery-thumbs">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="slider-img" src="./assets/images/10-bia-mau-my-a3-1.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="slider-img" src="./assets/images/bam-kim-10-plus.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="slider-img" src="./assets/images/bao-xop-cd-trang.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="slider-img" src="./assets/images/baothubd.jpg">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img class="slider-img" src="./assets/images/bia-ho-so-xin-viec-mau.jpg">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid__column-8 grid__column-12">
+                        <div class="product__detail">
+                            <h1 class="detail-name">Bút gel xóa được Thiên Long Điểm 10 TP-GELE002</h1>
+                            <div class="grid__row">
+                                <div class="detail__info">
+                                    <div class="detail-group">
+                                        <span>Thương hiệu: <span class="group-color">Điểm 10</span></span>
+                                        <span class="line">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                                        <span>Tình trạng: <span class="group-color">Còn hàng</span></span>
+                                        <p>Mã sản phẩm: <span class="group-color">SP042934</span></p>
+                                    </div>
+                                    <div class="detail-price">
+                                        <h3>10,620đ</h3>
+                                        <h5>10,620đ</h3>
+                                    </div>
+                                    <div class="detail-quantity">
+                                        <span>Số lượng:</span>
+                                        <form class="form-qty">
+                                            <button type="submit" class="btn-qty">-</button>
+                                            <input type="text" class="input-qty">
+                                            <button type="submit" class="btn-qty">+</button>
+                                        </form>
+
+                                    </div>
+                                    <div class="select-buy">
+                                        <a href="#" class="btn-buy">Chọn mua</a>
+                                    </div>
+                                </div>
+                                <div class="detail__media">
+                                    <h1>Thiên long Flexoffice.com:</h1>
+                                    <ul class="media">
+                                        <li class="media-item">
+                                            <img src="./assets/images/media_1.png" />
+                                            <span>Giao hàng tận nhà</span>
+                                        </li>
+                                        <li class="media-item">
+                                            <img src="./assets/images/media_2.png" />
+                                            <span>Sản phẩm chính hảng</span>
+                                        </li>
+                                        <li class="media-item">
+                                            <img src="./assets/images/media_3.png" />
+                                            <span>Tích lũy đổi quà</span>
+                                        </li>
+                                        <li class="media-item">
+                                            <img src="./assets/images/media_4.png" />
+                                            <span>Nhiều khuyến mãi, ưu đãi</span>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="grid grid__tablet">
+            <section class="product__category">
+                <div class="product__heading">
+                    <h3 class="product__heading-title">Mô tả sản phẩm</h3>
+                </div>
+                <div class="grid__row">
+                    <div class="grid__column-12">
+                       <div class="detail__description">
+                            <h3 style="padding-left: 10px;">Thông tin kỉ thuật:</h3>
+                            <h3 style="padding-left: 10px;">Đặc điểm sản phẩm:</h3>
+                       </div>
+                    </div>
+                </div>
+                </section>
+        </div>
+    </section>
+    <section>
+        <div class="grid grid__tablet">
+            <section class="product__category">
+                <div class="product__heading">
+                    <h3 class="product__heading-title">Sản phẩm cùng loại</h3>
+                </div>
+                <div class="grid__row">
+                    <div class="grid__column-3 p-align-10">
+                        <div class="product-item">
+                            <a class="product-item-link" href="#">
+
+                                <div class="product-item__sale">
+                                    <span class="product-item__percent">10%</span>
+                                    <span class="product-item__label">Giảm</span>
+                                </div>
+                                <div class="product-item-img">
+                                    <div class="product-item__img"
+                                        style="background-image:url(./assets/images/may-tinh-570-es-plus.jpg)"></div>
+                                </div>
+
+                                <div class="product-item__info">
+                                    <div class="product-item__name">
+                                        <p class="product-item__name-link">Bút lông 36 màu Fiber Pen Washable - Nét mảnh
+                                            nét
+                                            to - Colokit SWM</p>
+                                    </div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price-new">1100000đ</span>&nbsp;
+                                        <span class="product-item__price-old">1200000đ</span>
+
+                                    </div>
+                                    <div class="product-item__action">
+                                        <span class="product-item__action-like">
+                                            <i class="far fa-heart product-item__action-like-empty"></i>
+                                            @*<i class="fa fa-heart product-item__action-like-fill"></i>*@
+                                        </span>
+
+                                        <div class="product-item__action-rating">
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="product-item__review">
+                                <div class="product-item__control">
+                                    <button class="product-item__btn product-item__btn-buy-red">
+                                        Mua ngay
+                                    </button>
+                                    <button class="product-item__btn product-item__btn-view-white">
+                                        Xem nhanh
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid__column-3 p-align-10">
+                        <div class="product-item">
+                            <a class="product-item-link" href="#">
+
+                                <div class="product-item__sale">
+                                    <span class="product-item__percent">10%</span>
+                                    <span class="product-item__label">Giảm</span>
+                                </div>
+                                <div class="product-item-img">
+                                    <div class="product-item__img"
+                                        style="background-image:url(./assets/images/may-tinh-570-es-plus.jpg)"></div>
+                                </div>
+
+                                <div class="product-item__info">
+                                    <div class="product-item__name">
+                                        <p class="product-item__name-link">Bút lông 36 màu Fiber Pen Washable - Nét mảnh
+                                            nét
+                                            to - Colokit SWM</p>
+                                    </div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price-new">1100000đ</span>&nbsp;
+                                        <span class="product-item__price-old">1200000đ</span>
+
+                                    </div>
+                                    <div class="product-item__action">
+                                        <span class="product-item__action-like">
+                                            <i class="far fa-heart product-item__action-like-empty"></i>
+                                            @*<i class="fa fa-heart product-item__action-like-fill"></i>*@
+                                        </span>
+
+                                        <div class="product-item__action-rating">
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="product-item__review">
+                                <div class="product-item__control">
+                                    <button class="product-item__btn product-item__btn-buy-red">
+                                        Mua ngay
+                                    </button>
+                                    <button class="product-item__btn product-item__btn-view-white">
+                                        Xem nhanh
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid__column-3 p-align-10">
+                        <div class="product-item">
+                            <a class="product-item-link" href="#">
+
+                                <div class="product-item__sale">
+                                    <span class="product-item__percent">10%</span>
+                                    <span class="product-item__label">Giảm</span>
+                                </div>
+                                <div class="product-item-img">
+                                    <div class="product-item__img"
+                                        style="background-image:url(./assets/images/may-tinh-570-es-plus.jpg)"></div>
+                                </div>
+
+                                <div class="product-item__info">
+                                    <div class="product-item__name">
+                                        <p class="product-item__name-link">Bút lông 36 màu Fiber Pen Washable - Nét mảnh
+                                            nét
+                                            to - Colokit SWM</p>
+                                    </div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price-new">1100000đ</span>&nbsp;
+                                        <span class="product-item__price-old">1200000đ</span>
+
+                                    </div>
+                                    <div class="product-item__action">
+                                        <span class="product-item__action-like">
+                                            <i class="far fa-heart product-item__action-like-empty"></i>
+                                            @*<i class="fa fa-heart product-item__action-like-fill"></i>*@
+                                        </span>
+
+                                        <div class="product-item__action-rating">
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="product-item__review">
+                                <div class="product-item__control">
+                                    <button class="product-item__btn product-item__btn-buy-red">
+                                        Mua ngay
+                                    </button>
+                                    <button class="product-item__btn product-item__btn-view-white">
+                                        Xem nhanh
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="grid__column-3 p-align-10">
+                        <div class="product-item">
+                            <a class="product-item-link" href="#">
+
+                                <div class="product-item__sale">
+                                    <span class="product-item__percent">10%</span>
+                                    <span class="product-item__label">Giảm</span>
+                                </div>
+                                <div class="product-item-img">
+                                    <div class="product-item__img"
+                                        style="background-image:url(./assets/images/may-tinh-570-es-plus.jpg)"></div>
+                                </div>
+
+                                <div class="product-item__info">
+                                    <div class="product-item__name">
+                                        <p class="product-item__name-link">Bút lông 36 màu Fiber Pen Washable - Nét mảnh
+                                            nét
+                                            to - Colokit SWM</p>
+                                    </div>
+                                    <div class="product-item__price">
+                                        <span class="product-item__price-new">1100000đ</span>&nbsp;
+                                        <span class="product-item__price-old">1200000đ</span>
+
+                                    </div>
+                                    <div class="product-item__action">
+                                        <span class="product-item__action-like">
+                                            <i class="far fa-heart product-item__action-like-empty"></i>
+                                            @*<i class="fa fa-heart product-item__action-like-fill"></i>*@
+                                        </span>
+
+                                        <div class="product-item__action-rating">
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="product-item__review">
+                                <div class="product-item__control">
+                                    <button class="product-item__btn product-item__btn-buy-red">
+                                        Mua ngay
+                                    </button>
+                                    <button class="product-item__btn product-item__btn-view-white">
+                                        Xem nhanh
+                                    </button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+
+    </section>
+    <section style="background-color: #fff;margin:0;">
+        <div class="grid">
+            <div class="grid__column-12">
+                <div class="home__deal-slider">
+                    <div class="home__deal-list swiper-wrapper">
+                        <div class="home__deal-item swiper-slide">
+                            <div class="item__cover ">
+                                <img src="./assets/images/home_partner_1.png" alt="" class="deal__item-img">
+                            </div>
+                        </div>
+                        <div class="home__deal-item swiper-slide">
+                            <div class="item__cover">
+                                <img src="./assets/images/home_partner_3.png" alt="" class="deal__item-img">
+                            </div>
+                        </div>
+                        <div class="home__deal-item swiper-slide">
+                            <div class="item__cover">
+                                <img src="./assets/images/home_partner_4.png" alt="" class="deal__item-img">
+                            </div>
+                        </div>
+                        <div class="home__deal-item swiper-slide">
+                            <div class="item__cover">
+                                <img src="./assets/images/home_partner_5.png" alt="" class="deal__item-img">
+                            </div>
+                        </div>
+                        <div class="home__deal-item swiper-slide">
+                            <div class="item__cover">
+                                <img src="./assets/images/home_partner_6.png" alt="" class="deal__item-img">
+                            </div>
+                        </div>
+                        <div class="home__deal-item swiper-slide">
+                            <div class="item__cover">
+                                <img src="./assets/images/home_partner_7.png" alt="" class="deal__item-img">
+                            </div>
+                        </div>
+                        <div class="home__deal-item swiper-slide">
+                            <div class="item__cover">
+                                <img src="./assets/images/home_partner_8.png" alt="" class="deal__item-img">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <span class="fa fa-angle-left icon-left"></span>
+                    <span class="fa fa-angle-right icon-right"></span>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="grid grid__tablet">
+                <div class="grid__row">
+                    <div class="grid__column-4">
+                        <div class="detail__subcription">
+                            <h4 class="detail__heading">ĐĂNG KÍ NHẬN BẢN TIN</h4>
+                            <form class="detail__input">
+                                <input class="detail__input-text" type="email" placeholder="Nhập địa chỉ email"
+                                    required>
+                                <input class="detail__input-btn" type="submit" value="Đăng ký">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="grid__column-4">
+                        <div class="detail__certification">
+                            <h4 class="detail__heading">CHỨNG NHẬN</h4>
+                            <img class="detail__img" src="assets/images/footer_bct.png">
+                        </div>
+                    </div>
+                    <div class="grid__column-4">
+                        <div class="detail__payment">
+                            <h4 class="detail__heading">PHƯƠNG THỨC THANH TOÁN</h4>
+                            <img class="detail__img" src="assets/images/footer_payment.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="back-to-top"><i class="fa fa-angle-up"></i></div>
+            <div class="grid">
+                <div class="grid__row">
+                    <div class="grid__column-3 grid__column-tablet grid__column-mobile">
+                        <div class="footer__wrapper">
+                            <img class="footer__img" src="./assets/images/footer_infor.png" />
+                            <ul class="footer__title">
+                                <li class="footer__detail">Flexoffice.com - Website thương mại điện tử thuộc Tập đoàn
+                                    Thiên
+                                    Long
+                                </li>
+                                <li class="footer__detail">Công ty Cổ Phần Tập Đoàn Thiên Long</li>
+                                <li class="footer__detail">GPĐKKD số 0301464830 do Sở KHĐT TP. Hồ Chí Minh cấp ngày
+                                    04/03/2005.
+                                </li>
+                                <li class="footer__detail">Địa chỉ: Lô 6-8-10-12, Đường số 3, KCN Tân Tạo, Q.Bình Tân,
+                                    TP.
+                                    Hồ
+                                    Chí Minh, Việt Nam</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="grid__column-3 grid__column-tablet grid__column-mobile">
+                        <div class="footer__wrapper">
+                            <h3 class="footer__heading">HỖ TRỢ KHÁCH HÀNG</h3>
+                            <h4>Hotline: 1900 866 819</h4>
+                            <h4>salesonline@flexoffice.com.vn</h4>
+                            <ul class="footer__help">
+                                <li class="footer__help-item"> Chương trình khách hàng thân thiết</li>
+                                <li class="footer__help-item"> Hướng dẫn mua hàng</li>
+                                <li class="footer__help-item"> Hướng dẫn thanh toán</li>
+                                <li class="footer__help-item"> Chính sách giao hàng</li>
+                                <li class="footer__help-item"> Chính sách đổi trả & hoàn tiền</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid__column-3 grid__column-tablet grid__column-mobile">
+                        <div class="footer__wrapper">
+                            <h3 class="footer__heading">VỀ FLEXOFFICE</h3>
+                            <ul class="footer__info">
+                                <li class="footer__info-item">Giới thiệu</li>
+                                <li class="footer__info-item"> Dịch vụ in ấn quảng cáo</li>
+                                <li class="footer__info-item"> Chính sách bảo mật</li>
+                                <li class="footer__info-item">
+                                    Thông tin liên hệ
+                                </li>
+                                <li class="footer__info-item"> Điểm bán PARKER</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid__column-3 grid__column-tablet grid__column-mobile">
+                        <div class="footer__wrapper">
+                            <h3 class="footer__heading">
+                                LIÊN KẾT VỚI CHÚNG TÔI
+                            </h3>
+                            <div class="footer__contact-icons"><i class="fab fa-facebook-f"></i><i
+                                    class="fab fa-youtube"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="assets/js/s.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/login.js"></script>
+<script src="assets/js/slider.js"></script>
+
+</html>
